@@ -170,3 +170,73 @@ void generateStatistics(struct node *top) {
                         printf("Invalid input");
                 }
                 break;
+
+///////////////////////////////////////////////////////////////////
+
+            temp->passengers.passportNo, temp->passengers.firstname, temp->passengers.surname, temp->passengers.yearBorn, temp->passengers.email, temp->passengers.country
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void saveFile(struct node *top) {
+    struct node *temp;
+    temp = (struct node *) malloc(sizeof(struct node));
+    temp = top;
+    FILE *outFile;
+
+    outFile = fopen("Passengers.txt", "w");
+    fprintf(outFile, "%d\n", length(top));
+
+    while (temp != NULL) {
+        fprintf(outFile, "%d\n", temp->passengers.passportNo);
+        fprintf(outFile, "%s\n", temp->passengers.firstname);
+        fprintf(outFile, "%s\n", temp->passengers.surname);
+        fprintf(outFile, "%d\n", temp->passengers.yearBorn);
+        fprintf(outFile, "%s\n", temp->passengers.email);
+        fprintf(outFile, "%d\n", temp->passengers.country);
+        fprintf(outFile, "%d\n", temp->passengers.travelClass);
+        fprintf(outFile, "%d\n", temp->passengers.trips);
+        fprintf(outFile, "%d\n", temp->passengers.duration);
+        temp = temp->NEXT;
+    }
+    printf("Database saved.");
+    fclose(outFile);
+}
+
+void loadFile(struct node **top) {
+    FILE* inFile;
+    int noOfPassengers = 0;
+    struct node *temp;
+    temp = (struct node *) malloc(sizeof(struct node));
+
+    inFile = fopen("Passengers.txt", "r");
+    fscanf(inFile, "%d\n", &noOfPassengers);
+
+    if (noOfPassengers <= 0) {
+        printf("No passenger information found.\n");
+    }
+    else {
+        fscanf(inFile, "%d\n", &temp->passengers.passportNo);
+        fscanf(inFile, "%s\n", temp->passengers.firstname);
+        fscanf(inFile, "%s\n", temp->passengers.surname);
+        fscanf(inFile, "%d\n", &temp->passengers.yearBorn);
+        fscanf(inFile, "%s\n", temp->passengers.email);
+        fscanf(inFile, "%d\n", &temp->passengers.country);
+        fscanf(inFile, "%d\n", &temp->passengers.travelClass);
+        fscanf(inFile, "%d\n", &temp->passengers.trips);
+        fscanf(inFile, "%d\n", &temp->passengers.duration);
+        temp = temp->NEXT;
+        temp->NEXT = *top;
+        *top = temp;
+    }
+    fclose(inFile);
+}
+
+2
+jane
+mary
+1999
+jm@gmail.com
+1
+1
+2
+3

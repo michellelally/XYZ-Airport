@@ -58,47 +58,47 @@ include CMakeFiles\XYZ.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\XYZ.dir\flags.make
 
-CMakeFiles\XYZ.dir\main.cpp.obj: CMakeFiles\XYZ.dir\flags.make
-CMakeFiles\XYZ.dir\main.cpp.obj: ..\main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Shelley\CLionProjects\XYZ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/XYZ.dir/main.cpp.obj"
+CMakeFiles\XYZ.dir\main.c.obj: CMakeFiles\XYZ.dir\flags.make
+CMakeFiles\XYZ.dir\main.c.obj: ..\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Shelley\CLionProjects\XYZ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/XYZ.dir/main.c.obj"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\XYZ.dir\main.cpp.obj /FdCMakeFiles\XYZ.dir\ /FS -c C:\Users\Shelley\CLionProjects\XYZ\main.cpp
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\XYZ.dir\main.c.obj /FdCMakeFiles\XYZ.dir\ /FS -c C:\Users\Shelley\CLionProjects\XYZ\main.c
 <<
 
-CMakeFiles\XYZ.dir\main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/XYZ.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\XYZ.dir\main.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Shelley\CLionProjects\XYZ\main.cpp
+CMakeFiles\XYZ.dir\main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/XYZ.dir/main.c.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\XYZ.dir\main.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Shelley\CLionProjects\XYZ\main.c
 <<
 
-CMakeFiles\XYZ.dir\main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/XYZ.dir/main.cpp.s"
+CMakeFiles\XYZ.dir\main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/XYZ.dir/main.c.s"
 	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\XYZ.dir\main.cpp.s /c C:\Users\Shelley\CLionProjects\XYZ\main.cpp
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\XYZ.dir\main.c.s /c C:\Users\Shelley\CLionProjects\XYZ\main.c
 <<
 
-CMakeFiles\XYZ.dir\main.cpp.obj.requires:
+CMakeFiles\XYZ.dir\main.c.obj.requires:
 
-.PHONY : CMakeFiles\XYZ.dir\main.cpp.obj.requires
+.PHONY : CMakeFiles\XYZ.dir\main.c.obj.requires
 
-CMakeFiles\XYZ.dir\main.cpp.obj.provides: CMakeFiles\XYZ.dir\main.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\XYZ.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\XYZ.dir\main.cpp.obj.provides.build
-.PHONY : CMakeFiles\XYZ.dir\main.cpp.obj.provides
+CMakeFiles\XYZ.dir\main.c.obj.provides: CMakeFiles\XYZ.dir\main.c.obj.requires
+	$(MAKE) -f CMakeFiles\XYZ.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\XYZ.dir\main.c.obj.provides.build
+.PHONY : CMakeFiles\XYZ.dir\main.c.obj.provides
 
-CMakeFiles\XYZ.dir\main.cpp.obj.provides.build: CMakeFiles\XYZ.dir\main.cpp.obj
+CMakeFiles\XYZ.dir\main.c.obj.provides.build: CMakeFiles\XYZ.dir\main.c.obj
 
 
 # Object files for target XYZ
 XYZ_OBJECTS = \
-"CMakeFiles\XYZ.dir\main.cpp.obj"
+"CMakeFiles\XYZ.dir\main.c.obj"
 
 # External object files for target XYZ
 XYZ_EXTERNAL_OBJECTS =
 
-XYZ.exe: CMakeFiles\XYZ.dir\main.cpp.obj
+XYZ.exe: CMakeFiles\XYZ.dir\main.c.obj
 XYZ.exe: CMakeFiles\XYZ.dir\build.make
 XYZ.exe: CMakeFiles\XYZ.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Shelley\CLionProjects\XYZ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable XYZ.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Shelley\CLionProjects\XYZ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable XYZ.exe"
 	"C:\Program Files\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\XYZ.dir --manifests  -- C:\PROGRA~2\MICROS~1.0\VC\bin\link.exe /nologo @CMakeFiles\XYZ.dir\objects1.rsp @<<
  /out:XYZ.exe /implib:XYZ.lib /pdb:C:\Users\Shelley\CLionProjects\XYZ\cmake-build-debug\XYZ.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
@@ -108,7 +108,7 @@ CMakeFiles\XYZ.dir\build: XYZ.exe
 
 .PHONY : CMakeFiles\XYZ.dir\build
 
-CMakeFiles\XYZ.dir\requires: CMakeFiles\XYZ.dir\main.cpp.obj.requires
+CMakeFiles\XYZ.dir\requires: CMakeFiles\XYZ.dir\main.c.obj.requires
 
 .PHONY : CMakeFiles\XYZ.dir\requires
 
