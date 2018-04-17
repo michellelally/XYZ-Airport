@@ -1,0 +1,38 @@
+CODE FOR:
+
+LOGIN
+///////////////////////////////////////////////////////////////////////////////////////////
+  FILE *loginDetails;
+    loginDetails = fopen("../users.txt", "r");
+    char uname[6];
+    char pword[6];
+    int i = 0;
+    user login[3];
+
+    //Prompting user for username and password
+    printf("Welcome to XYZ Airport's database for passengers. \nPlease log in to continue.\n");
+    printf("Username: ");
+    scanf_s("%s", &uname);
+    printf("Password: ");
+    scanf_s("%s", &pword);
+
+    //Populating an array of user structs with the data from the login credentials file
+    if (loginDetails == NULL)
+    {
+        printf("Cannot login");
+    }
+    else
+    {
+        for (i = 0; i < 3; i++) {
+
+            fscanf_s(loginDetails, "%s", login[i].username);
+            fscanf_s(loginDetails, "%s", login[i].password);
+            printf("\n username: %s", login[i].username);
+            printf("\n password: %s", login[i].password);
+
+        }
+        while (!feof(loginDetails)) {
+
+        }
+    }
+///////////////////////////////////////////////////////////////////////////////////////////
