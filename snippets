@@ -36,3 +36,137 @@ LOGIN
         }
     }
 ///////////////////////////////////////////////////////////////////////////////////////////
+
+TRAVEL CLASS STATISTICS
+
+void travelClassStatistics (){
+    int country[5] = {0, 0, 0, 0, 0};
+    int duration[4] = {0, 0, 0, 0};
+    int totalCountries = 0;
+    int totalDurations = 0;
+
+    struct node *temp;
+    temp = (struct node *) malloc(sizeof(struct node));
+    temp = top;
+
+    switch (option){
+        case 1:
+            while (temp != NULL){
+                //another switch for travel class types here
+                switch(temp->passengers.country){
+                    case 1:
+                        country[0]++;
+                        totalCountries++;
+                        break;
+                    case 2:
+                        country[1]++;
+                        totalCountries++;
+                        break;
+                    case 3:
+                        country[2]++;
+                        totalCountries++;
+                        break;
+                    case 4:
+                        country[3]++;
+                        totalCountries++;
+                        break;
+                    case 5:
+                        country[4]++;
+                        totalCountries++;
+                        break;
+                    default:
+                        printf("Invalid input.");
+                        break;
+                }
+                temp = temp->NEXT;
+            }
+            break;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+void generateStatistics(struct node *top) {
+    int country[5] = {0, 0, 0, 0, 0};
+    int duration[4] = {0, 0, 0, 0};
+    int total = 0;
+
+    struct node *temp;
+    temp = (struct node *) malloc(sizeof(struct node));
+    temp = top;
+
+    while (temp != NULL) {
+        if (temp->passengers.yearBorn < 1980) {
+            switch (temp->passengers.country) {
+                case 1:
+                    country[0]++;
+                    total++;
+                    break;
+                case 2:
+                    country[1]++;
+                    total++;
+                    break;
+                case 3:
+                    country[2]++;
+                    total++;
+                    break;
+                case 4:
+                    country[3]++;
+                    total++;
+                    break;
+                case 5:
+                    country[4]++;
+                    total++;
+                    break;
+                default:
+                    printf("Invalid input.");
+                    break;
+            }
+            switch (temp->passengers.duration) {
+                case 1:
+                    duration[0]++;
+                    break;
+                case 2:
+                    duration[1]++;
+                    break;
+                case 3:
+                    duration[2]++;
+                    break;
+                case 4:
+                    duration[3]++;
+                    break;
+                default:
+                    printf("Invalid input.");
+                    break;
+            }
+        }
+        temp = temp->NEXT;
+    }
+
+    printf("Percentage of passengers who travel from The UK: %d \n", (country[0] * 100 / total));
+    printf("Percentage of passengers who travel from The Rest of Europe: %d \n", (country[1] * 100 / total));
+    printf("Percentage of passengers who travel from Asia: %d \n", (country[2] * 100 / total));
+    printf("Percentage of passengers who travel from the Americas: %d \n", (country[3] * 100 / total));
+    printf("Percentage of passengers who travel from Australasia: %d \n", (country[4] * 100 / total));
+    printf("Percentage of passengers who spent one day in Ireland: %d \n", (duration[0] * 100 / total));
+    printf("Percentage of passengers who spent less than 3 days in Ireland: %d \n", (duration[1] * 100 / total));
+    printf("Percentage of passengers who spent less than 7 days in Ireland: %d \n", (duration[2] * 100 / total));
+    printf("Percentage of passengers who spent more than 7 days in Ireland: %d \n", (duration[3] * 100 / total));
+
+}
+
+
+///////////////////////////////////////////////////////////////////////////
+
+               printf("Generate statistics based on: \n");
+                printf("\t1. Travel Class \n \t2. Born Before 1980 \n");
+                scanf("%d", &stat);
+                switch (stat){
+                    case 1:
+                        break;
+                    case 2:
+                        generateStatisticsYearBorn(headPtr);
+                        break;
+                    default:
+                        printf("Invalid input");
+                }
+                break;
